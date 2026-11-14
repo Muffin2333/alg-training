@@ -158,6 +158,9 @@ private:
     }
 
     ll build_tree(int l, int r, int id, int node[]) {
+        if (l > r) {
+            return 0;
+        }
         if (l == r) {
             data[id] = node[l];
             return data[id];
